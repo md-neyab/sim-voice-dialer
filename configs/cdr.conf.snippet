@@ -1,0 +1,16 @@
+; ============================================================
+; CSV CDR — report isi file se banti hai:
+;   /var/log/asterisk/cdr-csv/Master.csv
+;
+; install.sh /etc/asterisk/cdr.conf me [csv] section is tarah
+; ensure karta hai. Agar khud haath se karna ho to neeche wala
+; block cdr.conf me hona chahiye aur uske baad:
+;   sudo asterisk -rx "module reload cdr_csv.so"
+;   sudo asterisk -rx "cdr csv status"   (check ke liye)
+; ============================================================
+
+[csv]
+usegmtime=yes
+loguniqueid=yes
+loguserfield=yes
+accountlogs=yes
